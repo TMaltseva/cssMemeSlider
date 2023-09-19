@@ -14,6 +14,8 @@
     font-family: 'Inter';
 }
 
+/* -- */
+
 .slider {
     display: flex;
     margin: 10rem auto;
@@ -137,7 +139,6 @@
     transform: translateX(-13.5rem);
 }
 
-
 /* __ */
 
 #image-1:not(:checked):hover ~ .slider .navigation .points .point:nth-child(1) span {
@@ -193,6 +194,7 @@
 }
 
  /* --- */
+
 @media (max-width: 750px) {
     .slider {
         width: 80%;
