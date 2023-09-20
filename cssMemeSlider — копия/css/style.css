@@ -60,12 +60,15 @@
     flex-direction: row;
     white-space: nowrap;
     overflow: hidden;
-    width: 4rem;
+    width: 53rem;
     height: 1rem;
 }
 
 .text {
-    padding: 0 0.7rem;
+    padding: 0;
+    padding-left: 1rem;
+    padding-right: 35rem;
+    transition: all 0.5s ease;
 }
 
 .text-1 {
@@ -128,15 +131,15 @@
 }
 
 #image-2:checked ~ .slider .slider-nav .text-about .text {
-    transform: translateX(-4.5rem);
+    transform: translateX(-40rem);
 }
 
 #image-3:checked ~ .slider .slider-nav .text-about .text {
-    transform: translateX(-9rem);
+    transform: translateX(-79rem);
 }
 
 #image-4:checked ~ .slider .slider-nav .text-about .text {
-    transform: translateX(-13.5rem);
+    transform: translateX(-118rem);
 }
 
 /* __ */
@@ -202,7 +205,7 @@
         margin: 0 auto;
     }
     .slide img {
-        
+        height: 15rem;
         width: 40rem;
     }
     .navigation {
