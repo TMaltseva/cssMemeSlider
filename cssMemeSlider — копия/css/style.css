@@ -1,0 +1,238 @@
+* {
+    box-sizing: border-box;
+}
+
+.body {
+    margin: 0;
+    padding: 0 2rem;
+    color: rgb(228, 211, 179);
+    background-color: darkslategrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-family: 'Inter';
+}
+
+/* -- */
+
+.slider {
+    display: flex;
+    margin: 10rem auto;
+    flex-direction: column;
+    gap: 2rem;
+    overflow: hidden;
+    width: 45rem;
+    height: 30rem;
+}
+
+.main-input {
+    display: none;
+}
+
+.main-wrap {
+    display: flex;
+    overflow: hidden;
+    width: 500%;
+    height: auto;
+    transition: all 0.5s ease;
+}
+
+.slide {
+    width: 20%;
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+.slide img {
+    width: 53rem;
+    height: 25rem;
+    max-width: 100%;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+}
+
+.text-about {
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 53rem;
+    height: 1rem;
+}
+
+.text {
+    padding: 0;
+    padding-left: 1rem;
+    padding-right: 35rem;
+    transition: all 0.5s ease;
+}
+
+.text-1 {
+    overflow: hidden;
+    color:aliceblue;
+    transition: all 0.5s ease;
+    flex: 0 0 13rem;
+}
+
+.points {
+    display: flex;
+    justify-content: end;
+    flex: 1 1 auto;
+}
+
+.points label {
+    cursor: pointer;
+    gap: 0.5rem;
+    width: 2rem;
+    height: 2rem;
+}
+
+.points label:hover.point span {
+    background-color:bisque;
+}
+
+.point {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.point span {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    border: solid 3px wheat;
+    transition: all 0.2s ease;
+}
+
+#image-1:checked ~ .slider .main-wrap {
+    margin-left: 0;
+}
+
+#image-2:checked ~ .slider .main-wrap {
+    margin-left: -100%;
+}
+
+#image-3:checked ~ .slider .main-wrap {
+    margin-left: -200%;
+}
+
+#image-4:checked ~ .slider .main-wrap {
+    margin-left: -300%;
+}
+
+#image-1:checked ~ .slider .slider-nav .text-about .text {
+    transform: translateX(0rem);
+}
+
+#image-2:checked ~ .slider .slider-nav .text-about .text {
+    transform: translateX(-40rem);
+}
+
+#image-3:checked ~ .slider .slider-nav .text-about .text {
+    transform: translateX(-79rem);
+}
+
+#image-4:checked ~ .slider .slider-nav .text-about .text {
+    transform: translateX(-118rem);
+}
+
+/* __ */
+
+#image-1:not(:checked):hover ~ .slider .navigation .points .point:nth-child(1) span {
+    background-color: #ee63b0;
+}
+
+#image-1:active ~ .slider .navigation .points .point:nth-child(1) span {
+    background-color: #ffd1dc;
+}
+
+#image-1:checked ~ .slider .navigation .points .point:nth-child(1) span {
+    background-color: #ffd1dc;
+    border-color: #ffd1dc;
+}
+
+#image-2:not(:checked):hover ~ .slider .navigation .points .point:nth-child(2) span {
+    background-color: #ee63b0;
+}
+
+#image-2:active ~ .slider .navigation .points .point:nth-child(2) span {
+    background-color: #ffd1dc;
+}
+
+#image-2:checked ~ .slider .navigation .points .point:nth-child(2) span {
+    background-color: #ffd1dc;
+    border-color: #ffd1dc;
+}
+
+#image-3:not(:checked):hover ~ .slider .navigation .points .point:nth-child(3) span {
+    background-color: #ee63b0;
+}
+
+#image-3:active ~ .slider .navigation .points .point:nth-child(3) span {
+    background-color: #ffd1dc;
+}
+
+#image-3:checked ~ .slider .navigation .points .point:nth-child(3) span {
+    background-color: #ffd1dc;
+    border-color: #ffd1dc;
+}
+
+#image-4:not(:checked):hover ~ .slider .navigation .points .point:nth-child(4) span {
+    background-color: #ee63b0;
+}
+
+#image-4:active ~ .slider .navigation .points .point:nth-child(4) span {
+    background-color: #ffd1dc;
+}
+
+#image-4:checked ~ .slider .navigation .points .point:nth-child(4) span {
+    background-color: #ffd1dc;
+    border-color: #ffd1dc;
+}
+
+ /* --- */
+
+@media (max-width: 750px) {
+    .slider {
+        width: 80%;
+        height: 35rem;
+        margin: 0 auto;
+    }
+    .slide img {
+        height: 15rem;
+        width: 40rem;
+    }
+    .navigation {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .points {
+        order: 0;
+        justify-content: center;
+    }
+    .text-about {
+        order: 1;
+        justify-content: start;
+        align-self: start;
+    }
+}
+
+/* -- */
+
+@media (max-width: 460px) {
+    .slider {
+        height: 23rem;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .slide img {
+        height: 16rem;
+        width: 22rem;
+    }
+}
